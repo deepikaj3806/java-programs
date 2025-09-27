@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int cost1 = sc.nextInt(), qty1 = sc.nextInt();
+        int cost2 = sc.nextInt(), qty2 = sc.nextInt();
+        int cost3 = sc.nextInt(), qty3 = sc.nextInt();
+        int budget = sc.nextInt();
+
+        double beforeTax = cost1*qty1 + cost2*qty2 + cost3*qty3;
+        double afterTax = beforeTax * 1.10;
+
+        System.out.printf("Total (Before Tax): %.2f\n", beforeTax);
+        System.out.printf("Total (After Tax): %.2f\n", afterTax);
+
+        if(afterTax <= budget)
+            System.out.println("Within Budget");
+        else
+            System.out.println("Over Budget");
+    }
+}
