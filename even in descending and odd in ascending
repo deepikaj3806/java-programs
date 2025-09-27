@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        ArrayList<Integer> evens = new ArrayList<>();
+        ArrayList<Integer> odds = new ArrayList<>();
+        for (int x : arr) {
+            if (x % 2 == 0) evens.add(x);
+            else odds.add(x);
+        }
+        Collections.sort(evens, Collections.reverseOrder()); 
+        Collections.sort(odds); 
+        for (int x : evens) System.out.print(x + " ");
+        for (int x : odds) System.out.print(x + " ");
+    }
+}
