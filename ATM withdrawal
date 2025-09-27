@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int amount = sc.nextInt();
+        sc.nextLine();
+        String status = sc.nextLine();
+        if((status.equals("available")&&amount%100==0)||(status.equals("not available")&&amount%500==0))
+            System.out.println("Amount "+amount+" can be withdrawn");
+        else
+            System.out.println("Enter amount in multiples of 500");
+    }
+}
